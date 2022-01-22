@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport du projet</title>
+</head>
+<body>
+    <h1><strong>Rapport du projet programmation orientée objet JAVA: Extraction des métadonnées de fichiers images et
+        stéganographie</strong>
+    </h1>
+
+    Binôme: D-10
+    <br>&emsp; •Mohamed ABDELLI</br>
+    <br>&emsp; •Rabah BENNANE</br>
+
+    <br>Fait par Mohamed ABDELLI</br>
+    
+    <h2>Introduction: </h2>
+    <p>Ce projet s’inscrit dans le cadre des projets de deuxième année de licence informatique de l’université de Cergy-Pontoise. Ces derniers ont pour objectif d’initier à la gestion concrète d’un projet en groupe, mais également de mettre en oeuvre les principaux éléments du contenu du module dans le cadre de la conception d'une petite application. Le projet se déroule sur l’année universitaire 2021-2022.</p>
+
+    <h2>Gestion du projet:</h2>
+        <h3>&emsp;Cahier des charges initial:</h3>
+            <p>&emsp; &emsp;&emsp;L’établissement du cahier des charges correspond à un jalon important de la gestion de projet que nous avons établi. En plus des objectifs et d’un descriptif des fonctions attendues, il comporte un échéancier qui s’est révélé au final être éloigné de la réalité. Nous y reviendrons dans la partie III consacrée aux problèmes rencontrés lors de la gestion de projet.</p>
+        <h3>&emsp; &emsp;Objectifs:</h3>
+            <p>&emsp; &emsp;&emsp;Les principales actions sont :
+                <br>&emsp; &emsp;&emsp; &emsp;• L’extraction des métadonnées d’un fichier PNG ou JPEG.</br>
+                <br>&emsp; &emsp;&emsp; &emsp;• L’exploration complète d’un répertoire (d’un dossier et de l’ensemble de ses sous dossiers) contenant entre autre des fichiers images.</br>
+                <br>&emsp; &emsp;&emsp; &emsp;• L’utilisation de la stéganographie pour extraire ou dissimuler un message dans une image.</br>
+            </p>
+        <h3>&emsp; &emsp;Fonctions attendues:</h3>
+            <h4>&emsp;&emsp;&emsp;En mode console:</h4>
+            
+                <p>&emsp;&emsp;&emsp;&emsp;− Affichage des métadonnées d’une image en utilisant le paramètre « nom_fichier.png » permettant de spécifier le nom du fichier à analyser ainsi qu’un paramètre supplémentaire « -f » permettant de spécifier le type d’entrée (file).<br /></p>
+                <p>&emsp;&emsp;&emsp;&emsp;− Exploration d’un dossier et affichage de tous ses fichiers images (PNG, JPG, JPEG) en utilisant le paramètre « chemin_dossier » permettant de spécifier le chemin vers le dossier à explorer ainsi qu’un paramètre supplémentaire « -d » permettant de spécifier le type d’entrée (directory).</p>
+                <dl>
+                    <dt>&emsp;&emsp;&emsp;&emsp;− Steganographie :</dt>
+                    <dd>&emsp;&emsp;&emsp;&emsp;&emsp;Encodage:</dd>
+                    <dd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Ajouter un message caché dans une image en utilisant le paramètre « nom_fichier1.jpg » permettant de spécifier le nom du fichier image dans lequel le message sera caché, ainsi qu’un paramètre supplémentaire « -s » permettant de spécifier le type d’entrée (store) suivi du texte à cacher, entre crochets « ».</dd>
+                    <dd>&emsp;&emsp;&emsp;&emsp;&emsp;Décodage:</dd>
+                    <dd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Extraire un message caché dans une image en utilisant le paramètre « nom_fichier2.jpg » permettant de spécifier le nom du fichier image dans lequel le message est caché, ainsi qu’un paramètre supplémentaire « -e » permettant de spécifier le type d’entrée (store).</dd>
+                </dl>   
+                <p>&emsp;&emsp;&emsp;&emsp;− Affichage de l’aide avec les options possibles en utilisant le paramètre « -h » permettant de spécifier le type d’entrée (help).</p>
+                
+                <h4>
+                    &emsp;&emsp;&emsp;En mode graphique:
+                </h4>
+                    <p>&emsp;&emsp;&emsp;&emsp;;− Exploration d’une arborescence en listant tous ses fichiers images (JPEG ou PNG), leur emplacement ainsi que leurs métadonnées.</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;− Dissimuler ou extraire un texte d’une image en utilisant la stéganographie.</p>
+                
+        <h3>&emsp;&emsp;Critères d’évaluation et d’acceptabilité:</h3>
+                    <p>&emsp;&emsp;&emsp;A la fin du projet, il est donc attendu qu’un ensemble de fichiers .java ait été implémenté, ceux-ci devront être fonctionnels, documentés et avec un code le plus clair possible, accompagné d’un ensemble de livrables tel que le fichier « readme.md », la Javadoc, les fichiers jar ainsi que ce présent rapport de projet.</p>
+
+    <h2>Travaux réalisés:</h2>
+        <p>&emsp;&emsp;Avant même de commencer à travailler à proprement parler sur le projet, nous avons dû nous l’approprier et saisir les enjeux expliqués dans la partie précédente. Ainsi, au début du mois de décembre nous avons eu 2 points d’avancement avec notre chargé de TD, au cours de ces deux entretiens nous avons convenu d’utiliser un outil que nous ne connaissons pas jusqu’alors : Projet Maven qui permet d’importer les bibliothèques externes nécessaires pour l’extraction des métadonnées.</p>
+        <p>&emsp;&emsp;Une fois achevée cette première phase d’analyse, parfois fastidieuse mais néanmoins indispensable, nous avons rédigé le cahier des charges ci-dessus et avons commencé à réaliser les fonctions attendues.</p>
+        <h3>&emsp;Diagramme de classes (UML):</h3>
+            <img src="UML.jpg">
+        <h3>&emsp;Extraction des métadonnées:</h3>
+                <p>&emsp;&emsp;Nous avions choisi de commencer par cette phase plutôt que par la stéganographie car il semblait plus simple et plus progressif au niveau de la difficulté de procéder ainsi. En effet, nous verrons qu’autant cette première phase s’est relativement bien déroulée, que la seconde s’est révélée moins difficile.</p>
+                <p>&emsp;&emsp;Il existe plusieurs méthodes envisageables pour effectuer l’extraction des métadonnées, pour notre classe nous avons choisi d’utiliser le projet Maven qui importera la bibliothèque externe « Metadata-Extractor » développée par « Drew Noakes », c’est à partir de cette bibliothèque que nous avons pu extraire les métadonnées des fichiers images.</p>    
+                <p>&emsp;&emsp;Du fait de notre inexpérience dans les bibliothèques externes ainsi que l’utilisation du projet Maven, nous avons dû consacrer un temps relativement conséquent à cette phase.</p>
+        
+        <h3>&emsp;Exploration des dossiers et des sous-dossiers:</h3>
+                <p>&emsp;&emsp;Notre seconde tâche était ensuite l’exploration des dossiers et sous-dossiers afin de lister tous les fichiers images (PNG et JPEG) que ces derniers contiennent ainsi que leurs métadonnées, pour procéder à cela en mode console nous avons créé un tableau de fichiers où l’on a mis tous les fichiers existant dans le dossier indiqué, nous avons ensuite procéder à l’affichage des fichiers ayant une extension (PNG ou JPEG) uniquement à l’aide d’une boucle et d’un filtre en faisant appel à chaque fois à la classe «Metadata_Extract» afin d’afficher les métadonnées du fichier image. Concernant le mode graphique nous avons utilisé un«JFileChooser» avec des «FileNameExtensionFilter» afin d’afficher que les fichiers images souhaités, après que l’utilisateur ait choisit le fichier l’appel de la classe «Metadata_Extract» ainsi que l’affichage des métadonnées à l’endroit spécifié ce fera automatiquement.</p>
+        <h3>&emsp;Cli (Command line interface):</h3>
+                <p>&emsp;&emsp;il regroupe et exécute toutes les fonctions de l’application dans le terminal (l’extraction des métadonnées et la stéganographie) à l’aide des arguments (-f, -d, -e, -s) tapé par l’utilisateur. </p>
+        <h3>&emsp;Stéganographie</h3>
+                <h4>&emsp;&emsp;Encodage:</h4>
+                    <p>&emsp;&emsp;&emsp;Pour l’encodage, on prend le dernier bit de l’image de chaque couleur composant la couleur de chaque pixel. On convertit le message en binaire puis on remplace les deux derniers bits du rouge du premier pixel par les deux premiers bits de l’information à cacher et on fait le même processus pour les autres couleur (RGB). A la fin de l’encodage il est impossible de voir de la différence des deux images (image avant la stéganographie et après).</p>
+                <h4>&emsp;&emsp;Décodage:</h4>
+                    <p>&emsp;&emsp;&emsp;Tout d’abord, on doit calculer la taille du message stocké. Par exemple, 
+                        Le texte « geeksforgeeks » a 13 caractères. On parcourt les pixels de l’image un par un, et on stock le LSB (bit qui a le poids le plus faible) de chaque pixel dans un tableau. Ensuite on extrait le LSB des pixels requis et on prendra tous les 8 bits et les convertir au caractère correspondant et ça nous donne le texte qui a été codé.</p>               
+    
+    <h2>Conclusion:</h2>
+        <p>&emsp;&emsp;Tout d’abord, nous souhaitons remercier notre chargé de TD pour l’aide qu’il nous a apporté, pour avoir répondu à nos questions et de nous avoir conseillé d’utiliser le projet Maven.</p>
+        <p>&emsp;&emsp;Notre bilan du projet par rapport à ses objectifs est en demi-teinte. Nous n’avons certes pas rempli l’ensemble des fonctions attendues au cahier des charges: la récupération de la taille du texte caché lors de l’extraction de ce dernier. Néanmoins, nous avons indéniablement beaucoup appris, depuis l’extraction des métadonnées jusqu’à l’aperçu que nous avons pu avoir, Il a été l’occasion de découvrir de nouvelles notions informatiques, nous avons de nouveau constaté qu’il était parfois difficile de tenir des délais car des difficultés imprévues sont toujours possibles.</p>
+        <p>&emsp;&emsp;Enfin, nous avons souhaité rajouter quelques fonctionnalités afin d’améliorer notre projet tel que l’affichage de l’endroit où l’image a été prise grâce aux coordonnées GPS obtenues lors de l’extraction des métadonnées, ainsi que le perfectionnement de l’interface graphique.</p></br>          
+    
+    <div style="text-align: center;">
+        <img src="CYU_logo.png"
+        width="400"
+        height="150">
+    </div>
+    
+</body>
+
+
+</html>
